@@ -109,7 +109,7 @@ class SparseHMM(object):
                     delta[iState] = 0
                 scale = np.append(scale, np.double(1.0/deltasum))
             else:
-                print "WARNING: Viterbi has been fed some zero probabilities, at least they become zero at frame " +  str(iFrame) + " in combination with the model."
+                print("WARNING: Viterbi has been fed some zero probabilities, at least they become zero at frame " +  str(iFrame) + " in combination with the model.")
                 for iState in range(nState):
                     oldDelta[iState] = 1.0/nState
                     delta[iState] = 0

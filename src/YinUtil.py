@@ -155,7 +155,7 @@ def yinProb(yinBuffer, prior, yinBufferSize, minTau0, maxTau0):
             tau += 1
 
     if peakProb[minInd] > 1:
-        print "WARNING: yin has prob > 1 ??? I'm returning all zeros instead."
+        print("WARNING: yin has prob > 1 ??? I'm returning all zeros instead.")
         return np.zeros((yinBufferSize,), dtype=np.float64)
 
     nonPeakProb = 1.0
@@ -190,7 +190,7 @@ def parabolicInterpolation(yinBuffer, tau, yinBufferSize):
 
         betterTau = tau + adjustment
     else:
-        print "WARNING: can't do interpolation at the edge (tau = " + str(tau) + "), will return un-interpolated value.\n"
+        #print("WARNING: can't do interpolation at the edge (tau = " + str(tau) + "), will return un-interpolated value.\n")
         betterTau = tau
 
     return betterTau

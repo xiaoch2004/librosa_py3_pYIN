@@ -48,7 +48,7 @@ class Yin(object):
         self.m_inputSampleRate = 44100
         self.m_thresh = 0.2
         self.m_threshDistr = 2
-        self.m_yinBufferSize = self.m_frameSize/2
+        self.m_yinBufferSize = 1024
         self.m_fast = True
 
     def Yin(self, frameSize, inputSampleRate, thresh = 0.2, fast = True):
@@ -56,7 +56,7 @@ class Yin(object):
         self.m_inputSampleRate = inputSampleRate
         self.m_thresh = thresh
         self.m_threshDistr = 2
-        self.m_yinBufferSize = frameSize/2
+        self.m_yinBufferSize = int(frameSize/2)
         self.m_fast = fast
 
     class YinOutput(object):
@@ -111,7 +111,7 @@ class Yin(object):
     def setFrameSize(self, parameter):
 
         m_frameSize = parameter
-        m_yinBufferSize = m_frameSize/2
+        m_yinBufferSize = int(m_frameSize/2)
         return 0
 
     def setFast(self, parameter):

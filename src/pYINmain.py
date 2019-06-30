@@ -179,7 +179,7 @@ class PyinMain(object):
             salienceSum += yo.salience[iBin]
         self.fs.m_oCandidateSalience.append(copy.copy(f))
 
-        return self.fs
+        return self.fs, rms
 
     def getSmoothedPitchTrack(self):
         f = Feature()

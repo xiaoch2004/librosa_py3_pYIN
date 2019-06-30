@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # pypYIN
 python pYIN
 
@@ -68,3 +69,7 @@ See demo.py
  > in Proceedings of the First International Conference on Technologies for  
  > Music Notation and Representation, 2015.  
 
+=======
+# librosa_py3_pyin
+pYIN pitch detection implementation with librosa and python 3
+>>>>>>> e14508aab90f98053e60f366e850f409db1a77d5
