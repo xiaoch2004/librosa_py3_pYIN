@@ -1,6 +1,6 @@
 import os, sys
-dir = '/home/x/xiaochan/mandarin_pitch_tracker/pypYIN'
-srcpath = dir+'/src'
+dir = os.path.dirname(os.path.realpath(__file__))
+srcpath = dir + '/src'
 sys.path.append(srcpath)
 
 import pYINmain
@@ -30,5 +30,5 @@ def pyin(filename, inputSampleRate=44100, channels=1, frame_length=2048, hop_len
     return np.array(pitchlist), np.array(rmslist)
 
 if __name__ == "__main__":
-    a = pyin('src/testAudioLong.wav')
-    print(a.ravel())
+    pitch, _ = pyin('src/oboe-a4.wav')
+    print(pitch.ravel())
