@@ -27,3 +27,7 @@ from pyin import pyin
 pitch, _ = pyin(audio, inputSampleRate=None)
 ```
 
+## License
+librosa_py3_pYIN is a modified version of [pypyin](https://github.com/ronggong/pypYIN) in 2019. The original repo is copyrighted by Music Technology Group - Universitat Pompeu Fabra. 
+
+librosa_py3_pYIN is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation (FSF), either version 3 of the License, or (at your option) any later version.
